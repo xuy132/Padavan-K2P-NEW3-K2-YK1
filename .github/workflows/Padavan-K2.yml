@@ -97,5 +97,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: K22
+        name: K2
         path: /opt/images
