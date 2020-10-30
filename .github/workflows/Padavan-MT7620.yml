@@ -4,15 +4,15 @@ name: Build MT7620
 on: 
   release:
     types: [published]
-#  push:
-#    tags:
-#    - 'v*'
+  push:
+    tags:
+    - 'v*'
   #  branches: 
   #    - master
- # schedule:
- #   - cron: 0 17 * * 4
-#  watch:
-#    types: [started]
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
 
 jobs:
   build:
