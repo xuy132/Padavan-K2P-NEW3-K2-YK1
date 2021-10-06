@@ -1,3 +1,3 @@
 # Padavan-build
 
-一次生成K2，NEWifi3 两个固件
+一次生成K2，NEWifi3,K2P,YKL1固件
