@@ -31,7 +31,6 @@ jobs:
       run: |
         git clone --depth=1 https://github.com/immortalwrt/padavan.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
-        git checkout cbadfe5820f1d389050a9b925ea5e9e671ef358e
         sh dl_toolchain.sh
         mkdir -p /opt/images/
     - name: Build Firmware
