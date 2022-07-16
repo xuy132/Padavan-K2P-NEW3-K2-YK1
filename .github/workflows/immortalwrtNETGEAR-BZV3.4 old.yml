@@ -1,5 +1,5 @@
 #修改TNAME: K2P-5.0 中的K2P-5.0为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: presisco NETGEAR-BZV  old
+name: immortalwrt NETGEAR-BZV  old
 
 on:
   repository_dispatch:
@@ -29,7 +29,7 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/presisco/rt-n56u.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/immortalwrt/padavan/tree/cbadfe5820f1d389050a9b925ea5e9e671ef358e.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
@@ -90,7 +90,7 @@ jobs:
         ##流控QOS##
         echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config #SQM QOS#CPU超频
         echo "CONFIG_FIRMWARE_INCLUDE_OC=y" >> .config #CPU超频开关
-        echo 'CONFIG_FIRMWARE_MT7621_OC="0x362"' >> .config #此处填写对应频率的十六进制：1000Mhz=0x312 1100Mhz=0x362 1120Mhz=0x372 1200Mhz=0x3B2
+        echo 'CONFIG_FIRMWARE_MT7621_OC="0x312"' >> .config #此处填写对应频率的十六进制：1000Mhz=0x312 1100Mhz=0x362 1120Mhz=0x372 1200Mhz=0x3B2
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         #格式如下：
